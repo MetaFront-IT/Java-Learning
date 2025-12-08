@@ -1,10 +1,9 @@
-public class randomnumber {
+public class RandomNumber {
     public static void main(String[] args) {
-        int randomNumber = (int) (Math.random() * 101);
+        byte randomNumber = (byte) (Math.random() * 101);
         int userInput;
-        int triedTimes = 0;
-        boolean hardMode = Boolean.parseBoolean(IO.readln("HordMode (true/false) : "));
-        loop:
+        byte triedTimes = 0;
+        boolean hardMode = Boolean.parseBoolean(IO.readln("HardMode (true/false) : "));
         do {
             userInput = Integer.parseInt(IO.readln("Enter a number: "));
             triedTimes += 1;
@@ -13,7 +12,7 @@ public class randomnumber {
                     System.out.println("Game Over!");
                     System.out.println("you've reached your limit (7 times)!");
                     System.out.println("Random number was: " + randomNumber);
-                    break loop;
+                    break;
                 }
             }
             if (userInput > randomNumber) {
@@ -24,7 +23,10 @@ public class randomnumber {
                 continue;
             }
             System.out.println("congratulations!");
-            System.out.println("you've tried : " + triedTimes);
+            System.out.print("you've tried : " + triedTimes + " Times");
+            if (hardMode) {
+                System.out.println(" in hard mode!");
+            }
         } while (userInput != randomNumber);
     }
 }

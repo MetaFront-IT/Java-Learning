@@ -8,36 +8,41 @@ public class Main {
             System.out.println("۲:تفریق");
             System.out.println("۳:ضرب");
             System.out.println("۴:تقسیم");
-            System.out.println("۵:توان");
+            System.out.println("۵:توان مثبت");
             System.out.println("۶:خروج");
             System.out.println("یکی از اعداد را وارد کنید: ");
-            int num1;
-            int num2;
-            int result;
-            short opreation = input.nextShort();
+            float num1;
+            float num2;
+            float result;
+            short operation = input.nextShort();
 
-            if (opreation == 5) {
+            if (operation == 5) {
                 System.out.println("عدد را وارد کنید:");
-                num1 = input.nextInt();
-                result = num1 * num1;
+                num1 = input.nextFloat();
+                System.out.println("ریشه چند؟");
+                num2 = input.nextFloat();
+                result = num1;
+                for (int i = 1; i != num2; i++) {
+                    result = result * num1;
+                }
                 System.out.println(result);
-            } else if (opreation == 6) {
+            } else if (operation == 6) {
                 break;
             } else {
                 System.out.println("عدد اول را وارد کنید: ");
-                num1 = input.nextInt();
+                num1 = input.nextFloat();
                 System.out.println("عدد دوم را وارد کنید: ");
-                num2 = input.nextInt();
-                if (opreation == 1) {
+                num2 = input.nextFloat();
+                if (operation == 1) {
                     result = num1 + num2;
                     System.out.println(result);
-                } else if (opreation == 2) {
+                } else if (operation == 2) {
                     result = num1 - num2;
                     System.out.println(result);
-                } else if (opreation == 3) {
+                } else if (operation == 3) {
                     result = num1 * num2;
                     System.out.println(result);
-                } else if (opreation == 4) {
+                } else if (operation == 4) {
                     if (num2 == 0) {
                         System.err.println("عدد نا معتبر است");
                     } else {
