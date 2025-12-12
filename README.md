@@ -14,20 +14,20 @@
 ### 1. کلون کردن مخزن
 
 ```bash
-git clone https://github.com/your-repo/BMI.git
+git clone https://github.com/MetaFront-IT/Java-Learning.git
 ```
 
 ### 2. ورود به پوشه پروژه
 
 ```bash
-cd BMI
+cd Java-learning
 ```
 
 ### 3. کامپایل و اجرای برنامه
 
 ```bash
-javac BMI.java
-java BMI
+javac filename.java
+java filename
 ```
 
 > **نکته:** توجه داشته باشید که شما باید از JDK-25 استفاده کنید.\
