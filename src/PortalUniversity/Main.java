@@ -1,7 +1,7 @@
-package education;
+package PortalUniversity;
 
 public class Main {
     public static void main(String[] args) {
-        new AcademySystem();
+        new Application();
     }
 }
